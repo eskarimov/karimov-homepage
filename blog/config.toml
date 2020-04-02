@@ -1,0 +1,162 @@
+baseURL = "https://karimov.berlin"
+title = "Evgenii Karimov"
+paginate = 10
+DefaultContentLanguage = "en"
+
+[params]
+    author = "Evgenii Karimov"
+    description = "Personal homepage"
+    thumbnailPath = "self/img/avatar.jpg"
+    commentoJsUrl = "https://commento.karimov.berlin/js/commento.js"
+
+[taxonomies]
+tag = "tags"
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+  [languages.de]
+    languageName = "Deutsch"
+    weight = 2
+    [languages.de.params]
+      description = "Persönliche Homepage"
+  [languages.ru]
+    languageName = "Русский"
+    weight = 3
+    [languages.ru.params]
+      description = "Персональная веб-страница"
+
+
+[[languages.en.menu.main]]
+    identifier = "writing"
+    name = "Writing"
+    url = "/writing/"
+    weight = 1
+
+[[languages.de.menu.main]]
+    identifier = "writing"
+    name = "Schrift"
+    url = "/writing/"
+    weight = 1
+
+[[languages.ru.menu.main]]
+    identifier = "writing"
+    name = "Блог"
+    url = "/writing/"
+    weight = 1
+
+[[languages.en.menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects/"
+    weight = 2
+
+[[languages.de.menu.main]]
+    identifier = "projects"
+    name = "Projekte"
+    url = "/projects/"
+    weight = 2
+
+[[languages.ru.menu.main]]
+    identifier = "projects"
+    name = "Проекты"
+    url = "/projects/"
+    weight = 2
+
+[[languages.en.menu.main]]
+    identifier = "photos"
+    name = "Photos"
+    url = "/photos/"
+    weight = 3
+
+[[languages.de.menu.main]]
+    identifier = "photos"
+    name = "Fotos"
+    url = "/photos/"
+    weight = 3
+
+[[languages.ru.menu.main]]
+    identifier = "photos"
+    name = "Фотки"
+    url = "/photos/"
+    weight = 3
+
+[[languages.en.menu.icon]]
+    url = "mailto:evgenii@karimov.berlin"
+    name = "Email"
+    identifier  = "fas fa-envelope"
+    weight = 1
+
+[[languages.en.menu.icon]]
+    url = "https://www.linkedin.com/in/evgenii-karimov/"
+    name = "LinkedIn"
+    identifier  = "fab fa-linkedin-in"
+    weight = 2
+
+[[languages.en.menu.icon]]
+    url = "https://github.com/eskarimov"
+    name = "Github"
+    identifier  = "fab fa-github"
+    weight = 3
+
+[[languages.en.menu.icon]]
+    url = "https://www.instagram.com/eskarimov"
+    name = "Instagram"
+    identifier  = "fab fa-instagram"
+    weight = 4
+
+[[languages.de.menu.icon]]
+    url = "mailto:evgenii@karimov.berlin"
+    name = "Email"
+    identifier  = "fas fa-envelope"
+    weight = 1
+
+[[languages.de.menu.icon]]
+    url = "https://www.linkedin.com/in/evgenii-karimov/"
+    name = "LinkedIn"
+    identifier  = "fab fa-linkedin-in"
+    weight = 2
+
+[[languages.de.menu.icon]]
+    url = "https://github.com/eskarimov"
+    name = "Github"
+    identifier  = "fab fa-github"
+    weight = 3
+
+[[languages.de.menu.icon]]
+    url = "https://www.instagram.com/eskarimov"
+    name = "Instagram"
+    identifier  = "fab fa-instagram"
+    weight = 4
+
+[[languages.ru.menu.icon]]
+    url = "mailto:evgenii@karimov.berlin"
+    name = "Email"
+    identifier  = "fas fa-envelope"
+    weight = 1
+
+[[languages.ru.menu.icon]]
+    url = "https://www.linkedin.com/in/evgenii-karimov/"
+    name = "LinkedIn"
+    identifier  = "fab fa-linkedin-in"
+    weight = 2
+
+[[languages.ru.menu.icon]]
+    url = "https://github.com/eskarimov"
+    name = "Github"
+    identifier  = "fab fa-github"
+    weight = 3
+
+[[languages.ru.menu.icon]]
+    url = "https://www.instagram.com/eskarimov"
+    name = "Instagram"
+    identifier  = "fab fa-instagram"
+    weight = 4
+
+[outputs]
+    page = ["HTML"]
+    home = ["HTML"]
+    section = ["HTML","RSS"]
+    taxonomyTerm = ["HTML"]
+    taxonomy = ["HTML"]

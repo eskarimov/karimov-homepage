@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  server:
+    image: registry.gitlab.com/commento/commento:latest
+    ports:
+      - "127.0.0.1:${COMMENTO_PORT_EXTERNAL}:8080"
+    environment:
+      COMMENTO_ORIGIN: ${COMMENTO_ORIGIN}
+      COMMENTO_POSTGRES: postgres://postgres:postgres@db:5432/commento?sslmode=disable
+    depends_on:
+      - db
+    env_file:
+      - .env
+    restart: always
+  db:
+    image: postgres
+    environment:
+      POSTGRES_DB: commento
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - ${POSTGRES_DATA_VOLUME_PATH}:/var/lib/postgresql/data
+    env_file:
+      - .env
+    restart: always
