@@ -1,0 +1,15 @@
+<html>
+{{ partial "head" .}}
+<body>
+{{ partial "nav" .}}
+{{ if .Params.UseHeader }}
+    {{ partial (printf "header/%s" .Params.UseHeader) .}}
+{{ else }}
+    {{ partial "header/default_header" .}}
+{{ end }}
+<div id="content">
+    {{ block "main" . }}{{ end }}
+</div>
+{{ partial "footer" . }}
+</body>
+</html>

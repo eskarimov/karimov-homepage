@@ -1,0 +1,58 @@
+baseURL = "https://example.com"
+title = "Example Site"
+paginate = 3
+languageCode = "en"
+DefaultContentLanguage = "en"
+
+[params]
+    author = "Steve Francia"
+    description = "example description"
+    # logo = "//blog.ertuil.top/avater.png"
+    exampleSite = "https://ya.ru"
+    thumbnailPath = "self/img/avatar.jpg"
+
+#[taxonomies]
+#category = "categories"
+#tag = "tags"
+
+[[menu.main]]
+    identifier = "writing"
+    name = "Writing"
+    url = "/writing/"
+    weight = 1
+
+[[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects/"
+    weight = 2
+
+[[menu.main]]
+    identifier = "Photos"
+    name = "Photos"
+    url = "/photos/"
+    weight = 3
+
+[[menu.icon]]
+    url = "mailto:username@mail.com"
+    name = "envelope"
+    identifier  = "fas fa-envelope"
+    weight = 1
+
+[[menu.icon]]
+    url = "https://github.com/username/"
+    name = "github"
+    identifier  = "fab fa-github"
+    weight = 2
+
+[[menu.icon]]
+    url = "https://www.gitlab.com/username/"
+    name = "gitlab"
+    identifier  = "fab fa-gitlab"
+    weight = 3
+
+[[menu.icon]]
+    url = "https://www.instagram.com/username/"
+    name = "instagram"
+    identifier  = "fab fa-instagram"
+    weight = 4

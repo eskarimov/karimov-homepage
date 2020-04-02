@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-light font-weight-bold">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="/">{{ .Site.Title }}</a>
+    </div>
+    {{ if .Site.Menus.main }}
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto">
+                {{ range sort .Site.Menus.main }}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
+                    </li>
+                {{ end }}
+            </ul>
+        </div>
+    {{ end }}
+</nav>

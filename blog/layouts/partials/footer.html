@@ -1,0 +1,14 @@
+<footer>
+    <div>
+        &copy; {{ now.Year }} {{ .Site.Params.Author }}.
+    </div>
+    {{ if .Site.Menus.icon }}
+    <div>
+        {{ range sort .Site.Menus.icon }}
+            <div>
+                <a href="{{ .URL }}"><i class="{{ .Identifier }}" data-hint="{{ .Name }}"></i></a>
+            </div>
+        {{ end }}
+    </div>
+    {{ end }}
+</footer>
