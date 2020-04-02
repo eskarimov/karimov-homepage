@@ -1,0 +1,5 @@
+.idea
+.idea/*
+blog/public/*
+blog/static/*
+!blog/static/self/
