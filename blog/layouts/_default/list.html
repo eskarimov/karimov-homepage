@@ -1,11 +1,15 @@
 <html>
-{{ partial "head" .}}
+{{ partial "head" . }}
 <body>
-{{ partial "nav" .}}
+{{ partial "nav" . }}
 {{ if .Params.UseHeader }}
-    {{ partial (printf "header/%s" .Params.UseHeader) .}}
+    {{ partial (printf "header/%s" .Params.UseHeader) . }}
 {{ else }}
-    {{ partial "header/default_header" .}}
+    {{ partial "header/default_header" . }}
+{{ end }}
+{{ range .Pages }}
+    {{ .Title }}
+    {{ .Content }}
 {{ end }}
 {{ partial "footer" . }}
 </body>

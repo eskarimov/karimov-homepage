@@ -1,14 +1,15 @@
-<footer>
-    <div>
-        &copy; {{ now.Year }} {{ .Site.Params.Author }}.
-    </div>
-    {{ if .Site.Menus.icon }}
-    <div>
-        {{ range sort .Site.Menus.icon }}
-            <div>
-                <a href="{{ .URL }}"><i class="{{ .Identifier }}" data-hint="{{ .Name }}"></i></a>
+<footer class="footer card-footer text-secondary mt-auto">
+    <div class="row">
+        <div class="col col-sm-9">
+            &copy; {{ now.Year }} {{ .Site.Params.Author }}
+        </div>
+        {{ if .Site.Menus.icon }}
+            <div class="col-12 col-sm-3 text-sm-right px-2">
+                {{ range sort .Site.Menus.icon }}
+                    <a href="{{ .URL }}" class="text-nowrap text-secondary"><i
+                                class="{{ .Identifier }} fa-fw valign-middle" data-hint="{{ .Name }}"></i></a>
+                {{ end }}
             </div>
         {{ end }}
     </div>
-    {{ end }}
 </footer>

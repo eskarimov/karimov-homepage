@@ -1,20 +1,28 @@
-categories to add:
-writing
-projects
-photos
-
-
 Add favicon - done
 Complete head - done
 Complete nav - done
 Complete header - done
-Main page top
-Main page content
-Complete footer
-Writing top
-Writing content
-Project top
-Project content
-Photos
-Add RSS
-nginx
+Main page top - done
+Main page content - done
+Complete footer - done
+Writing top - done
+Writing content - done
+Taxonomies page - done
+Project top - done
+Project content (website, telegram bots, radio station) - done
+Photos - put photos into content, use gallery template in index.html on top of content/photos.html - done
+Add RSS - done
+Add comments - done
+404 page - done
+Multilanguage support - done
+Add CV to website - won't do
+Add related content to blog posts - https://gohugo.io/content-management/related/ ?? -- won't do
+Polishing - linkedin link - done
+Add comment to Fotos - done
+Content - done
+Domain name - done
+setup github repo - done
+github pages -
+go deps - ?
+comments through Google, Twitter, Github
+tst

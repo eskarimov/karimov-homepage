@@ -1,0 +1,28 @@
+<div class="d-flex p-2 content">
+    <div class="row">
+        <div class="col col-sm-9">
+            <h3>About me</h3>
+            <p>
+                I'm a data engineer and developer based in Berlin.
+                I love programming, travelling and active sports like Thai boxing and surfing.
+                I'm passion about new technologies, currently self-studying about Quantum physics.
+                <br>
+                For more info, check out:
+                <a href="{{ .Menus.main.writing }}">writing</a>,
+                <a href="{{ .Menus.main.projects }}">projects</a>,
+                <a href="{{ .Menus.main.photos }}">photos</a>.
+            </p>
+        </div>
+        <div class="col-12 col-sm-3">
+            <h3>Contact</h3>
+            {{ if .Site.Menus.icon }}
+                {{ range sort .Site.Menus.icon }}
+                    <a href="{{ .URL }}" class="text-nowrap text-dark" target="_blank">
+                        <i class="{{ .Identifier }} fa-fw fa-2x valign-middle" data-hint="{{ .Name }}"></i><span
+                                class="h6 font-sans" style="font-size: 0.9rem">{{ .Name }}</span>
+                    </a>
+                {{ end }}
+            {{ end }}
+        </div>
+    </div>
+</div>
