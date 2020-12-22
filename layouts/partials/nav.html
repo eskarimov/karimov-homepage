@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-sm navbar-light font-weight-bold border-bottom">
     <div class="navbar-header">
-        <a class="navbar-brand" href="{{ .Site.BaseURL }}{{ .Site.Language.Lang }}">{{ .Site.Title }}</a>
+        <a class="navbar-brand" href="{{ .Site.BaseURL }}/{{ .Site.Language.Lang }}">{{ .Site.Title }}</a>
     </div>
     <div>
         <ul class="navbar-nav ml-auto">
@@ -16,8 +16,6 @@
                     {{ end }}
                     {{ range $.Translations }}
                         <a class="dropdown-item" href="{{ .Permalink }}"><i class="fas fa-flag-{{ .Lang }}"></i>{{ .Language.LanguageName }}</a>
-{{/*                            <a class="dropdown-item" href="{{ "blog/" | absLangURL }}"><i class="fas fa-flag-{{ .Lang }}"></i>{{ .LanguageName }}</a>*/}}
-{{/*                        <a class="dropdown-item" href="{{ $.Site.BaseURL }}{{ .Lang }}"><i class="fas fa-flag-{{ .Lang }}"></i>{{ .LanguageName }}</a>*/}}
                     {{ end}}
                 </div>
             </li>
