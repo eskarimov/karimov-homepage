@@ -15,14 +15,17 @@ tag = "tags"
 [languages]
   [languages.en]
     languageName = "English"
+    languageCode = "EN"
     weight = 1
   [languages.de]
     languageName = "Deutsch"
+    languageCode = "DE"
     weight = 2
     [languages.de.params]
       description = "Persönliche Homepage"
   [languages.ru]
     languageName = "Русский"
+    languageCode = "RU"
     weight = 3
     [languages.ru.params]
       description = "Персональная веб-страница"
