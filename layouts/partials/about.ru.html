@@ -9,9 +9,14 @@
                 Интересуюсь новыми технологиями, в последнее время особенно квантовой физикой.
                 <br>
                 Больше информации доступно в разделах:
-                <a href="{{ .Menus.main.writing }}">блог</a>,
-                <a href="{{ .Menus.main.projects }}">проекты</a>,
-                <a href="{{ .Menus.main.photos }}">фотографии</a>.
+                {{ $len_pages := (len .Site.Menus.main ) }}
+                {{ range $index, $menu := .Site.Menus.main }}
+                {{ if ne (add $index 1) $len_pages }}
+                <a href="{{ .URL | absLangURL }}">{{ .Name | lower }}</a>,
+                {{ else }}
+                <a href="{{ .URL | absLangURL }}">{{ .Name | lower }}</a>.
+                {{ end }}
+                {{ end }}
             </p>
         </div>
         <div class="col-12 col-sm-3">

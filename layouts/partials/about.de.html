@@ -8,14 +8,13 @@
                 Ich bin begeistert von neuen Technologien. Icj interessiere mich gerade für die Quantenphysik.
                 <br>
                 Weitere Informationen finden Sie unter:
-                {{ with .Site.GetPage "writing" }}
-                    <a href="{{ .Permalink }}">Schrift</a>,
+                {{ $len_pages := (len .Site.Menus.main ) }}
+                {{ range $index, $menu := .Site.Menus.main }}
+                {{ if ne (add $index 1) $len_pages }}
+                <a href="{{ .URL | absLangURL }}">{{ .Name | lower }}</a>,
+                {{ else }}
+                <a href="{{ .URL | absLangURL }}">{{ .Name | lower }}</a>.
                 {{ end }}
-                {{ with .Site.GetPage "projects" }}
-                    <a href="{{ .Permalink }}">Projekte</a>,
-                {{ end }}
-                {{ with .Site.GetPage "photos" }}
-                    <a href="{{ .Permalink }}">Fotos</a>.
                 {{ end }}
             </p>
         </div>
