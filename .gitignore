@@ -2,4 +2,5 @@
 .idea/*
 blog/public/*
 static/*
+!static/fontawesome-free-5.12.1-web/
 !static/self/
