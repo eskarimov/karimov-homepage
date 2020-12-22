@@ -1,7 +1,7 @@
 +++
 title = "Radio"
 captionUrl = "https://radio.karimov.moscow/192kbps"
-thumbnailPath = "self/img/thumbs/radio.png"
+thumbnailPath = "/self/img/thumbs/radio.png"
 weight = 2
 +++
 Radio-station which I created for fun.  

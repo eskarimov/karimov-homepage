@@ -1,7 +1,7 @@
 +++
 title = "Переход на Notion после многих лет использования OneNote"
 date = 2020-12-16
-thumbnailPath = "self/img/thumbs/books.jpg"
+thumbnailPath = "/self/img/thumbs/books.jpg"
 tags = ["notion", "zettelkasten"]
 isPopular = false
 +++

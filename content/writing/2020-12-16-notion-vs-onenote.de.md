@@ -1,7 +1,7 @@
 +++
 title = "Wechseln zu Notion nach vielen Jahren mit OneNote"
 date = 2020-12-16
-thumbnailPath = "self/img/thumbs/books.jpg"
+thumbnailPath = "/self/img/thumbs/books.jpg"
 tags = ["notion", "zettelkasten"]
 isPopular = false
 +++

@@ -6,7 +6,7 @@ DefaultContentLanguage = "en"
 [params]
     author = "Evgenii Karimov"
     description = "Personal homepage"
-    thumbnailPath = "self/img/avatar.jpg"
+    thumbnailPath = "/self/img/avatar.jpg"
     commentoJsUrl = "https://commento.karimov.berlin/js/commento.js"
 
 [taxonomies]

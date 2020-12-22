@@ -1,7 +1,7 @@
 +++
 title = "Telegram bots"
 captionUrl = "https://t.me/monitorrzdbot"
-thumbnailPath = "self/img/thumbs/tlgrm.png"
+thumbnailPath = "/self/img/thumbs/tlgrm.png"
 weight = 1
 +++
 Ein Paar von Telegram Bots, die seit langer Zeit ersellt wurden:

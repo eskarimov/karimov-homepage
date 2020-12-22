@@ -1,7 +1,7 @@
 +++
 title = "Homepage"
 captionUrl = "https://karimov.berlin"
-thumbnailPath = "self/img/thumbs/home-page.png"
+thumbnailPath = "/self/img/thumbs/home-page.png"
 weight = 1
 headless = true
 +++
