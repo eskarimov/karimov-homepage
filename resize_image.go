@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	var path = "blog/static/self/img/2020-11-23-summer-days-france-2020/"
+	var path = "./input_folder/"
 	files, err := ioutil.ReadDir(path)
 	if err != nil {
 		log.Fatal(err)
