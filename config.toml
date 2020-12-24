@@ -2,6 +2,7 @@ baseURL = "https://karimov.berlin"
 title = "Evgenii Karimov"
 paginate = 10
 DefaultContentLanguage = "en"
+googleAnalytics = "G-S7J5XDDPH7"
 
 [params]
     author = "Evgenii Karimov"
