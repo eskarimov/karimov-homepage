@@ -1,26 +1,23 @@
-version: '3'
+version: '2'
 
 services:
-  server:
-    image: registry.gitlab.com/commento/commento:latest
+  remark:
+    image: umputun/remark42:latest
+    container_name: "remark42"
+    hostname: "remark42"
+    restart: always
+
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
+
     ports:
-      - "127.0.0.1:${COMMENTO_PORT_EXTERNAL}:8080"
-    environment:
-      COMMENTO_ORIGIN: ${COMMENTO_ORIGIN}
-      COMMENTO_POSTGRES: postgres://postgres:postgres@db:5432/commento?sslmode=disable
-    depends_on:
-      - db
+      - "127.0.0.1:${PORT_EXTERNAL}:8080"
+
     env_file:
       - .env
-    restart: always
-  db:
-    image: postgres
-    environment:
-      POSTGRES_DB: commento
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+
     volumes:
-      - ${POSTGRES_DATA_VOLUME_PATH}:/var/lib/postgresql/data
-    env_file:
-      - .env
-    restart: always
+      - ./remark42_storage:/srv/var
