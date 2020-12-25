@@ -1,7 +1,7 @@
 +++
 title = "Некоторые заметки после плотной работы с Spark/AWS Glue"
 date = 2020-11-23
-thumbnailPath = "/self/img/thumbs/i-spark.png"
+thumbnailPath = "/self/img/thumbs/random-code.jpg"
 tags = ["spark", "engineering"]
 isPopular = false
 +++
