@@ -2,6 +2,10 @@
     {{ with .Site.GetPage "writing" }}
     <a href="{{ .Permalink }}" class="text-nowrap text-secondary">{{ .Title }}</a>
     {{ end }}
+    {{ with .Site.GetPage "photos" }}
+    <span class="px-1 text-secondary">|</span>
+    <a href="{{ .Permalink }}" class="text-nowrap text-secondary">{{ .Title }}</a>
+    {{ end }}
     {{ with .Site.GetPage "tags" }}
     <span class="px-1 text-secondary">|</span>
     <a href="{{ .Permalink }}" class="text-nowrap text-secondary">{{ .Title }}</a>
