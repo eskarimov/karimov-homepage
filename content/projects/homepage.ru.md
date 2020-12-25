@@ -1,6 +1,6 @@
 +++
 title = "Блог/домашняя страница"
-captionUrl = "https://karimov.berlin"
+captionUrl = "https://www.karimov.berlin"
 thumbnailPath = "/self/img/thumbs/home-page.png"
 weight = 1
 headless = true
