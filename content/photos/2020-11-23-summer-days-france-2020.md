@@ -40,4 +40,3 @@ Necessary France attributes &#129322;
 
 Bordeaux main square
 {{< figure link="/self/img/2020-11-23-summer-days-france-2020/15.jpg" width="500px" >}}
-{{< load-photoswipe >}}

@@ -29,4 +29,3 @@ für meine Wochenpläne und eine andere Vorlage für die Reiseplanung (aber ansc
 Bitte schreiben Sie Kommentare, wenn Sie daran interessieren, dass ich einige Beispiele meiner Listen / Tabellen / Planstrukturen teilen würde.
 
 P.S. Ich habe keinen Cent von Notion für diesen Artikel bekommen 😛
-{{< load-photoswipe >}}

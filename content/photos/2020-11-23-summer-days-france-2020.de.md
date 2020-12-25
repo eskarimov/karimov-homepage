@@ -40,4 +40,3 @@ Notwendige Sachen in Frankreich &#129322;
 
 Bordeaux Bordeaux Hauptplatz
 {{< figure link="/self/img/2020-11-23-summer-days-france-2020/15.jpg" width="500px" >}}
-{{< load-photoswipe >}}

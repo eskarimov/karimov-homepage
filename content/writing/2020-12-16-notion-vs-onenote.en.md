@@ -28,4 +28,3 @@ and another custom template for travels planing (but apparently it's not availab
 Feel free to leave comments if you're interested that I'd share some examples of my lists/tables/plan structures. 
 
 P.S. I didn't get a cent from Notion for this post 😛
-{{< load-photoswipe >}}
