@@ -71,3 +71,10 @@ img {
     max-height: 100%;
     max-width: 100%;
 }
+
+figure.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
