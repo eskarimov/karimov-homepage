@@ -12,6 +12,10 @@ aber als ich einen Artikel über die Zettelkasten-Notizenmethode gelesen habe
 (ich empfehle, einen Blick darauf zu werfen!), habe ich ich festgestellt, 
 dass ich wahrscheinlich meine Werkzeuge überprüfen und etwas Neues ausprobieren muss, 
 um Verknüpfungen zwischen meinen Notizen herzustellen.
+{{< figure link="/self/img/thumbs/books.jpg"
+caption="Bild aus dem Internet auf der Suche nach der Zettelkasten-Methode"
+caption-position="bottom"
+class="center">}}
 
 Deshalb habe ich Notion eine Chance gegeben.
 
@@ -25,3 +29,4 @@ für meine Wochenpläne und eine andere Vorlage für die Reiseplanung (aber ansc
 Bitte schreiben Sie Kommentare, wenn Sie daran interessieren, dass ich einige Beispiele meiner Listen / Tabellen / Planstrukturen teilen würde.
 
 P.S. Ich habe keinen Cent von Notion für diesen Artikel bekommen 😛
+{{< load-photoswipe >}}

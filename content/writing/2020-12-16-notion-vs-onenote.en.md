@@ -11,6 +11,10 @@ It suited my needs for many years, but while reading
 [the article about "Zettelkasten"](https://en.wikipedia.org/wiki/Zettelkasten) notes method
 (highly recommend to have a look!) I found
 that probably I need to review my tools and try something new allowing to build links between my notes.
+{{< figure link="/self/img/thumbs/books.jpg"
+caption="Image from the Internet on search of Zettelkasten method"
+caption-position="bottom"
+class="center">}}
 
 So I gave a chance to Notion, especially after it removed a limit on amount of pages for free plan.
 
@@ -24,3 +28,4 @@ and another custom template for travels planing (but apparently it's not availab
 Feel free to leave comments if you're interested that I'd share some examples of my lists/tables/plan structures. 
 
 P.S. I didn't get a cent from Notion for this post 😛
+{{< load-photoswipe >}}
