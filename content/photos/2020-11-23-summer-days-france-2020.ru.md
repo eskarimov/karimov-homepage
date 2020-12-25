@@ -23,7 +23,7 @@ tags = ["france", "vacation", "photos", "surfing"]
 {{< /gallery >}}
 
 Монументально!
-{{< figure link="/self/img/2020-11-23-summer-days-france-2020/9.jpg" width="768px" >}}
+{{< figure link="/self/img/2020-11-23-summer-days-france-2020/9.jpg" width="768px" class="center">}}
 
 Восхождение на пик La Rhune
 {{< gallery >}}
@@ -39,4 +39,5 @@ tags = ["france", "vacation", "photos", "surfing"]
 {{< /gallery >}}
 
 Главная площадь Бордо
-{{< figure link="/self/img/2020-11-23-summer-days-france-2020/15.jpg" width="500px" >}}
+{{< figure link="/self/img/2020-11-23-summer-days-france-2020/15.jpg" width="500px">}}
+{{< load-photoswipe >}}
