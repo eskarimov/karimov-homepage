@@ -39,4 +39,4 @@ tags = ["france", "vacation", "photos", "surfing"]
 {{< /gallery >}}
 
 Главная площадь Бордо
-{{< figure link="/self/img/2020-11-23-summer-days-france-2020/15.jpg" width="500px">}}
+{{< figure link="/self/img/2020-11-23-summer-days-france-2020/15.jpg" width="500px" class="center">}}
