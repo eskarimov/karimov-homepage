@@ -8,8 +8,8 @@ isPopular = false
 В данной статье я бы хотел вкратце рассказать о самых известных подходах к построению хранилиз данных, а именно:
 - [Inmon](#Inmon)
 - [Kimball](#Kimball)
-- [Data Vault](#Data Vault)
-- [Data Lake](#Data Lake)
+- [Data Vault](#Data-Vault)
+- [Data Lake](#Data-Lake)
 - [Lakehouse](#Lakehouse)
 
 Важно заметить, что я не ставлю целью раскрыть все детали, так как каждая из этих концепций заслуживает отдельной подробной статьи.  

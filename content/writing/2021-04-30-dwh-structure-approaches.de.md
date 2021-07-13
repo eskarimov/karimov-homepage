@@ -8,8 +8,8 @@ isPopular = false
 In diesem Artikel möchte ich einige bekannte Data Warehousing Konzepte behandeln, um einen kurzen Überblick darüber zu bauen:
 - [Inmon](#Inmon)
 - [Kimball](#Kimball)
-- [Data Vault](#Data Vault)
-- [Data Lake](#Data Lake)
+- [Data Vault](#Data-Vault)
+- [Data Lake](#Data-Lake)
 - [Lakehouse](#Lakehouse)
 
 Ich habe kein Ziel, alle Kleinigkeiten jedes Konzeptes hier zu außern, weil jedes Konzepz einen eigenen Artikeln verdient.

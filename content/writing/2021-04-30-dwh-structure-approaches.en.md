@@ -8,8 +8,8 @@ isPopular = false
 With this post I'd like to cover some well-know approaches to data-warehousing in order to have a brief overview of them: 
 - [Inmon](#Inmon)
 - [Kimball](#Kimball)
-- [Data Vault](#Data Vault)
-- [Data Lake](#Data Lake)
+- [Data Vault](#Data-Vault)
+- [Data Lake](#Data-Lake)
 - [Lakehouse](#Lakehouse)
 
 I'm not aiming to cover all the details of each approach in this article, as each of them deserves its own separate article.
