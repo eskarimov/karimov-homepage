@@ -23,7 +23,7 @@ Kreative Bilder
 {{< /gallery >}}
 
 Monumental!
-{{< figure link="/self/img/2020-11-23-summer-days-france-2020/9.jpg" width="768px" class="center">}}
+{{< figure link="/self/img/2020-11-23-summer-days-france-2020/9.jpg" width="768px" class="left">}}
 
 Aufstieg zum La Rhune Gipfel
 {{< gallery >}}
