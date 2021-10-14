@@ -23,7 +23,7 @@ Some creative pics
 {{< /gallery >}}
 
 Monumental!
-{{< figure link="/self/img/2020-11-23-summer-days-france-2020/9.jpg" width="768px" class="left">}}
+{{< figure link="/self/img/2020-11-23-summer-days-france-2020/9.jpg" width="400px" class="left">}}
 
 Climbing to La Rhune peak
 {{< gallery >}}
@@ -39,4 +39,4 @@ Necessary France attributes &#129322;
 {{< /gallery >}}
 
 Bordeaux main square
-{{< figure link="/self/img/2020-11-23-summer-days-france-2020/15.jpg" width="500px" class="left">}}
+{{< figure link="/self/img/2020-11-23-summer-days-france-2020/15.jpg" width="400px" class="left">}}
