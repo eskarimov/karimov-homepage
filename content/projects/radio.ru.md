@@ -1,6 +1,5 @@
 +++
-title = "Radio"
-captionUrl = "https://radio.karimov.moscow/192kbps"
+title = "Radio [Deprecated]"
 thumbnailPath = "/self/img/thumbs/radio.png"
 weight = 2
 +++
