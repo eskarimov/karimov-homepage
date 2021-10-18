@@ -17,3 +17,5 @@ fields:
 - type: boolean
   name: isPopular
   label: isPopular
+pages:
+- content/writing/2021-11-18 Reverse ETL.en.md
