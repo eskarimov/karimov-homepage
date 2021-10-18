@@ -6,75 +6,64 @@ webhook_url:
 sections:
 - type: heading
   label: English
-
 - type: directory
   path: content/writing
-  match: "**/*.en.md"
   label: Writing
   create: all
-  new_doc_ext: ".en.md"
-
+  match: "**/*.en.md"
+  new_doc_ext: en.md
 - type: directory
   path: content/projects
-  match: "**/*.en.md"
   label: Projects
   create: all
-  new_doc_ext: ".en.md"
-
+  match: "**/*.en.md"
+  new_doc_ext: en.md
 - type: directory
   path: content/photos
-  match: "**/*.en.md"
   label: Photos
   create: all
-  new_doc_ext: ".en.md"
-
+  match: "**/*.en.md"
+  new_doc_ext: en.md
 - type: heading
   label: Deutsch
-
 - type: directory
   path: content/writing
-  match: "**/*.de.md"
   label: Schrift
   create: all
-  new_doc_ext: ".de.md"
-
+  match: "**/*.de.md"
+  new_doc_ext: de.md
 - type: directory
   path: content/projects
-  match: "**/*.de.md"
   label: Projekte
   create: all
-  new_doc_ext: ".de.md"
-
+  match: "**/*.de.md"
+  new_doc_ext: de.md
 - type: directory
   path: content/photos
-  match: "**/*.de.md"
   label: Fotos
   create: all
-  new_doc_ext: ".de.md"
-
+  match: "**/*.de.md"
+  new_doc_ext: de.md
 - type: heading
   label: Русский
-
 - type: directory
   path: content/writing
-  match: "**/*.ru.md"
   label: Блог
   create: all
-  new_doc_ext: ".ru.md"
-
+  match: "**/*.ru.md"
+  new_doc_ext: ru.md
 - type: directory
   path: content/projects
-  match: "**/*.ru.md"
   label: Проекты
   create: all
-  new_doc_ext: ".ru.md"
-
+  match: "**/*.ru.md"
+  new_doc_ext: ru.md
 - type: directory
   path: content/photos
-  match: "**/*.ru.md"
   label: Фото
   create: all
-  new_doc_ext: ".ru.md"
+  match: "**/*.ru.md"
+  new_doc_ext: ru.md
 upload_dir: static/self
 public_path: "/uploads"
 front_matter_path: ''

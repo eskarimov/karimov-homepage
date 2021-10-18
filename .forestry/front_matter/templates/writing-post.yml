@@ -1,0 +1,19 @@
+---
+label: Writing post
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: datetime
+  name: date
+  label: date
+- type: file
+  name: thumbnailPath
+  label: thumbnailPath
+- type: list
+  name: tags
+  label: tags
+- type: boolean
+  name: isPopular
+  label: isPopular
