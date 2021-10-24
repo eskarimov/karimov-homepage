@@ -65,7 +65,7 @@ sections:
   match: "**/*.ru.md"
   new_doc_ext: ru.md
 upload_dir: static/self
-public_path: "/uploads"
+public_path: "/self/img"
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
