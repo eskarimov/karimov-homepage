@@ -27,7 +27,9 @@ Das gilt besonders stark für große Unternehmen.
 
 ### Kimball
 Im Gegensatz zum Inmon-Ansatz gilt dieser von Ralph Kimball als Von-unten-nach-oben-Ansatz.
-Hauptquellen (operative Systeme) werden identifiziert und dokumentiert.
+Hauptquellen (operative Systeme) werden identifiziert und dokumentiert.  
+Normalerweise ist es einfacher, mit Kimball zu beginnen, die Daten nach Abteilungen in Data Marts aufzuteilen.
+Aber es wird später schwieriger, das Model zu skalieren.  
 ETL-Tools bringen Daten aus verschiedenen Quellen und laden sie in den Staging-Bereich.
 Anschließend werden die Daten in die Dimensionstabellen geladen. Der entscheidende Punkt ist, dass die Daten nicht normalisiert werden,
 weil die Daten entweder im Star- oder Snowflake-Schema (unter bestimmten Umständen) organisiert werden.

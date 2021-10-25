@@ -25,7 +25,8 @@ to design it and keep integration between all the components, which might be com
 
 ### Kimball
 In opposite to the Inmon approach this one by Ralph Kimball is considered to be a bottom-up approach.
-Key sources (operational systems) are identified and documented.
+Key sources (operational systems) are identified and documented.  
+Normally it's easier to star twith Kimball, to split the data into datamarts accroding to each department. But it's harder to scale it later.  
 ETL tools bring data from different sources and load it into the staging area.
 Then data is loaded into the dimensional tables. The key point is that the data isn't normalized as data is organized 
 either in Star or Snowflake (under certain circumstances) schema.
