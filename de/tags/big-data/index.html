@@ -13,8 +13,8 @@ Datenredundanz wird weitestgehend vermieden.
 Der größte Nachteil dieses Ansatzes ist, dass die Daten von oben nach unten beschrieben werden sollten.
 Dafür sind sehr erfahrene Leute erforderlich, um dieses System zu entwerfen und die Integration zwischen allen Komponenten aufrechtzuerhalten.
 Das gilt besonders stark für große Unternehmen.</p><h3 id=kimball>Kimball</h3><p>Im Gegensatz zum Inmon-Ansatz gilt dieser von Ralph Kimball als Von-unten-nach-oben-Ansatz.
-Hauptquellen (operative Systeme) werden identifiziert und dokumentiert.
-ETL-Tools bringen Daten aus verschiedenen Quellen und laden sie in den Staging-Bereich.
+Hauptquellen (operative Systeme) werden identifiziert und dokumentiert.<br>Normalerweise ist es einfacher, mit Kimball zu beginnen, die Daten nach Abteilungen in Data Marts aufzuteilen.
+Aber es wird später schwieriger, das Model zu skalieren.<br>ETL-Tools bringen Daten aus verschiedenen Quellen und laden sie in den Staging-Bereich.
 Anschließend werden die Daten in die Dimensionstabellen geladen. Der entscheidende Punkt ist, dass die Daten nicht normalisiert werden,
 weil die Daten entweder im Star- oder Snowflake-Schema (unter bestimmten Umständen) organisiert werden.</p><h3 id=data-vault>Data Vault</h3><p>Das DV-Modell ist kurz gesagt eine Schicht, die zwischen der regulären dimensionalen Modellierung (OLAP, Star Schema)
 und dem Staging existiert, die eine Skalierung mit wachsenden Geschäftsanforderungen ermöglicht und dazu dient,

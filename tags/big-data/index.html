@@ -13,8 +13,7 @@ Each logical model contains all the details related to that entity. The key poin
 Data redundancy is avoided as much as possible.
 The biggest downside of this approach is that the data should be described from top to down, what required very skillful people
 to design it and keep integration between all the components, which might be complicated in the enterprise-level companies.</p><h3 id=kimball>Kimball</h3><p>In opposite to the Inmon approach this one by Ralph Kimball is considered to be a bottom-up approach.
-Key sources (operational systems) are identified and documented.
-ETL tools bring data from different sources and load it into the staging area.
+Key sources (operational systems) are identified and documented.<br>Normally it&rsquo;s easier to star twith Kimball, to split the data into datamarts accroding to each department. But it&rsquo;s harder to scale it later.<br>ETL tools bring data from different sources and load it into the staging area.
 Then data is loaded into the dimensional tables. The key point is that the data isn&rsquo;t normalized as data is organized
 either in Star or Snowflake (under certain circumstances) schema.</p><h3 id=data-vault>Data Vault</h3><p>The DV model, in a nutshell, is a layer that exists between regular dimensional modeling (OLAP, Star Schema) and
 Staging that provides scaling with growing business requirements and serves to break down complexities of both the modeling and ETL.
