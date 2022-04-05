@@ -6,7 +6,56 @@
 <span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse" id=collapsibleNavbar><ul class="navbar-nav ml-auto"><li class="nav-item active"><a class="nav-link navbar-dark" href=https://www.karimov.berlin/writing/>Writing</a></li><li class="nav-item active"><a class="nav-link navbar-dark" href=https://www.karimov.berlin/projects/>Projects</a></li><li class="nav-item active"><a class="nav-link navbar-dark" href=https://www.karimov.berlin/photos/>Photos</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id=dropdownMenuButton role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false><i class="fas fa-globe"></i>EN</a><div class="dropdown-menu dropdown-menu-right" aria-labelledby=dropdownMenuButton><a class=dropdown-item><i class="fas fa-flag-en"></i><b>English</b></a>
 <a class=dropdown-item href=https://www.karimov.berlin/de/tags/data-engineering/><i class="fas fa-flag-de"></i>Deutsch</a>
 <a class=dropdown-item href=https://www.karimov.berlin/ru/tags/data-engineering/><i class="fas fa-flag-ru"></i>Русский</a></div></li></ul></div></nav><div class="jumbotron header-font border"><div class=text-center><a href=https://www.karimov.berlin/en><img class="lazyload rounded-circle rounded-50 border-white bg-white mx-auto avatar-100" data-src=https://www.karimov.berlin/self/img/avatar.jpg></a>
-<a href=https://www.karimov.berlin/en><h1 class="text-dark font-weight-bold">Evgenii Karimov</h1></a><h2>Developer, data engineer<br>Blog, photos and more</h2></div></div>Thoughts about the modern data engineering stack<p>Random thoughts about the modern data engineering stack - the modern stack should be the best from the beginning,
+<a href=https://www.karimov.berlin/en><h1 class="text-dark font-weight-bold">Evgenii Karimov</h1></a><h2>Developer, data engineer<br>Blog, photos and more</h2></div></div>Implementing slim CI for dbt with GitHub Actions<p>Recently I&rsquo;ve started working with dbt, and have to say it&rsquo;s quite amazing.
+With this post I&rsquo;d like to share the approach for deploying only newly created/modified models, known as slim CI.</p><p>Imagine we have an Airflow instance executing our dbt DAG daily.</p><p>In case we introduce structural changes in our models, or simply by creating a new model,
+we don&rsquo;t want to wait till Airflow starts on schedule.
+Also, we don&rsquo;t want to fire the whole pipeline execution, because it might be costly to run it multiple times per day.</p><p>What we could do in this case is to introduce a new CI step,
+which will compare differences between old and new models,
+and run only those, which have changed (and their dependencies/downstream tasks).</p><p>How it works with GitHub Actions:</p><p>say we have <code>deploy_dbt.yml</code> file describing our CI actions</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yml data-lang=yml><span style=color:#f92672>name</span>: <span style=color:#e6db74>&#39;Deploy dbt&#39;</span>
+
+<span style=color:#f92672>on</span>:
+  <span style=color:#f92672>push</span>:
+    <span style=color:#f92672>branches</span>:
+      - <span style=color:#ae81ff>main</span>
+<span style=color:#f92672>env</span>:
+  <span style=color:#f92672>DBT_VERSION</span>: <span style=color:#ae81ff>1.0.0</span>
+<span style=color:#f92672>jobs</span>:
+  <span style=color:#f92672>dbt-slim-ci</span>:
+    <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Deploy dbt models</span>
+    <span style=color:#f92672>runs-on</span>: <span style=color:#ae81ff>ubuntu-latest</span>
+    <span style=color:#f92672>permissions</span>:
+      <span style=color:#f92672>actions</span>: <span style=color:#ae81ff>read</span>
+      <span style=color:#f92672>contents</span>: <span style=color:#ae81ff>read</span>
+    <span style=color:#f92672>steps</span>:
+      - <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/checkout@v2</span>
+      <span style=color:#75715e># Get commit hash of the last successful deployment, it will be used for comparison</span>
+      - <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>nrwl/last-successful-commit-action@v1</span>
+        <span style=color:#f92672>id</span>: <span style=color:#ae81ff>last_successful_commit</span>
+        <span style=color:#f92672>with</span>:
+          <span style=color:#f92672>branch</span>: <span style=color:#e6db74>&#39;main&#39;</span>
+          <span style=color:#f92672>workflow_id</span>: <span style=color:#e6db74>&#39;deploy_dbt.yml&#39;</span>
+          <span style=color:#f92672>github_token</span>: <span style=color:#ae81ff>${{ secrets.GITHUB_TOKEN }}</span>
+      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Checkout last successful main</span>
+        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/checkout@v2</span>
+        <span style=color:#f92672>with</span>:
+          <span style=color:#f92672>ref</span>: <span style=color:#ae81ff>${{ steps.last_successful_commit.outputs.commit_hash }}</span>
+          <span style=color:#f92672>path</span>: <span style=color:#ae81ff>last_successful_main/</span>
+      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Install dbt &amp; packages</span>
+        <span style=color:#f92672>run</span>: |-<span style=color:#e6db74>
+</span><span style=color:#e6db74>          pip3 install dbt==${{ env.DBT_VERSION }}
+</span><span style=color:#e6db74>          dbt deps</span>          
+      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Generate last successful manifest.json</span>
+        <span style=color:#f92672>run</span>: &gt;<span style=color:#e6db74>
+</span><span style=color:#e6db74>          dbt compile
+</span><span style=color:#e6db74>          --project-dir last_successful_main/
+</span><span style=color:#e6db74>          --profiles-dir last_successful_main/</span>          
+      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Build and test new models</span>
+        <span style=color:#f92672>run</span>: &gt;<span style=color:#e6db74>
+</span><span style=color:#e6db74>          dbt build
+</span><span style=color:#e6db74>          --select state:modified+
+</span><span style=color:#e6db74>          --defer
+</span><span style=color:#e6db74>          --state last_successful_main/target/</span>          
+</code></pre></div><p>Happy coding!</p>Thoughts about the modern data engineering stack<p>Random thoughts about the modern data engineering stack - the modern stack should be the best from the beginning,
 or at least aiming to be so.</p><p>It means any required vendor solutions should be onboarded as early as possible,
 obviously given the platform vision and financial situation at hand.</p><p>There&rsquo;s no point re-inventing the wheel unless you&rsquo;re trying to solve a unique use-case,
 which might be the truth for huge data systems like Netflix or Google has.
