@@ -1,5 +1,5 @@
 +++
-title = "Телеграм боты"
+title = "Телеграм боты [Deprecated]"
 captionUrl = "https://t.me/monitorrzdbot"
 thumbnailPath = "/self/img/thumbs/tlgrm.png"
 weight = 1
