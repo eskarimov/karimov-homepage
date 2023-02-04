@@ -106,10 +106,16 @@ tag = "tags"
     weight = 3
 
 [[languages.en.menu.icon]]
+    url = "https://medium.com/@evgen-karimov"
+    name = "Medium"
+    identifier  = "fab fa-medium"
+    weight = 4
+
+[[languages.en.menu.icon]]
     url = "https://www.instagram.com/eskarimov"
     name = "Instagram"
     identifier  = "fab fa-instagram"
-    weight = 4
+    weight = 5
 
 [[languages.de.menu.icon]]
     url = "mailto:eskarimov@gmail.com"
@@ -130,10 +136,16 @@ tag = "tags"
     weight = 3
 
 [[languages.de.menu.icon]]
+    url = "https://medium.com/@evgen-karimov"
+    name = "Medium"
+    identifier  = "fab fa-medium"
+    weight = 4
+
+[[languages.de.menu.icon]]
     url = "https://www.instagram.com/eskarimov"
     name = "Instagram"
     identifier  = "fab fa-instagram"
-    weight = 4
+    weight = 5
 
 [[languages.ru.menu.icon]]
     url = "mailto:eskarimov@gmail.com"
@@ -154,10 +166,16 @@ tag = "tags"
     weight = 3
 
 [[languages.ru.menu.icon]]
+    url = "https://medium.com/@evgen-karimov"
+    name = "Medium"
+    identifier  = "fab fa-medium"
+    weight = 4
+
+[[languages.ru.menu.icon]]
     url = "https://www.instagram.com/eskarimov"
     name = "Instagram"
     identifier  = "fab fa-instagram"
-    weight = 4
+    weight = 5
 
 [outputs]
     page = ["HTML"]
